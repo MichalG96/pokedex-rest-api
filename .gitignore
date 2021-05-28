@@ -2,3 +2,4 @@ venv/
 .idea/
 task.pdf
 __pycache__/
+sensitive_data/
