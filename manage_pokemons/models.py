@@ -12,6 +12,7 @@ class Pokemon(models.Model):
     stats = models.ForeignKey('Stats', on_delete=models.CASCADE)
 
 
+
 class Stats(models.Model):
     total = models.PositiveSmallIntegerField()
     hp = models.PositiveSmallIntegerField()
@@ -20,3 +21,6 @@ class Stats(models.Model):
     special_attack = models.PositiveSmallIntegerField()
     special_defense = models.PositiveSmallIntegerField()
     speed = models.PositiveSmallIntegerField()
+
+    class Meta:
+        verbose_name_plural = "Stats"
