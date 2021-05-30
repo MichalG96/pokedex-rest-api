@@ -20,7 +20,6 @@ for i, row in pokemon_df.iterrows():
                                    'special_attack': row['Sp. Atk'],
                                    'special_defense': row['Sp. Def'],
                                    'speed': row['Speed'],
-                                   'total': row['Total'],
                                }})
 
 with open('pokemon_fixtures.json', 'w') as outfile:

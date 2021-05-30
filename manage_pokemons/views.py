@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Pokemon
+from .serializers import PokemonSerializer
+
+
+class PokemonViewSet(viewsets.ModelViewSet):
+    serializer_class = PokemonSerializer
+    queryset = Pokemon.objects.all()
