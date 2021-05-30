@@ -7,3 +7,5 @@ from .serializers import PokemonSerializer
 class PokemonViewSet(viewsets.ModelViewSet):
     serializer_class = PokemonSerializer
     queryset = Pokemon.objects.all()
+    filterset_fields = ['type1', 'type2']
+    search_fields = ['name']

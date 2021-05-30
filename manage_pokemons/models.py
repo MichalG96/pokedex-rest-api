@@ -2,25 +2,25 @@ from django.db import models
 from django.core.validators import MinValueValidator
 
 TYPE_CHOICES = [
-    ('bug', 'Bug'),
-    ('dark', 'Dark'),
-    ('Dragon', 'dragon'),
-    ('electric', 'Electric'),
-    ('fairy', 'Fairy'),
-    ('fighting', 'Fighting'),
-    ('fire', 'Fire'),
-    ('flying', 'Flying'),
-    ('ghost', 'Ghost'),
-    ('grass', 'Grass'),
-    ('ground', 'Ground'),
-    ('ice', 'Ice'),
-    ('normal', 'Normal'),
-    ('poison', 'Poison'),
-    ('psychic', 'Psychic'),
-    ('rock', 'Rock'),
-    ('steel', 'Steel'),
-    ('water', 'Water'),
-    ('no type', '')
+    ('Bug', 'Bug'),
+    ('Dark', 'Dark'),
+    ('Dragon', 'Dragon'),
+    ('Electric', 'Electric'),
+    ('Fairy', 'Fairy'),
+    ('Fighting', 'Fighting'),
+    ('Fire', 'Fire'),
+    ('Flying', 'Flying'),
+    ('Ghost', 'Ghost'),
+    ('Grass', 'Grass'),
+    ('Ground', 'Ground'),
+    ('Ice', 'Ice'),
+    ('Normal', 'Normal'),
+    ('Poison', 'Poison'),
+    ('Psychic', 'Psychic'),
+    ('Rock', 'Rock'),
+    ('Steel', 'Steel'),
+    ('Water', 'Water'),
+    ('', 'no type')
 ]
 
 
