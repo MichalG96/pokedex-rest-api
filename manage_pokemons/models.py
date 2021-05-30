@@ -1,11 +1,33 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 
+TYPE_CHOICES = [
+    ('bug', 'Bug'),
+    ('dark', 'Dark'),
+    ('Dragon', 'dragon'),
+    ('electric', 'Electric'),
+    ('fairy', 'Fairy'),
+    ('fighting', 'Fighting'),
+    ('fire', 'Fire'),
+    ('flying', 'Flying'),
+    ('ghost', 'Ghost'),
+    ('grass', 'Grass'),
+    ('ground', 'Ground'),
+    ('ice', 'Ice'),
+    ('normal', 'Normal'),
+    ('poison', 'Poison'),
+    ('psychic', 'Psychic'),
+    ('rock', 'Rock'),
+    ('steel', 'Steel'),
+    ('water', 'Water'),
+    ('no type', '')
+]
+
 
 class Pokemon(models.Model):
     name = models.CharField(max_length=60)
-    type1 = models.CharField(max_length=30)
-    type2 = models.CharField(max_length=30, null=True, blank=True)
+    type1 = models.CharField(max_length=30, choices=TYPE_CHOICES[:-1])
+    type2 = models.CharField(max_length=30, choices=TYPE_CHOICES, null=True, blank=True)
     generation = models.PositiveSmallIntegerField(validators=[MinValueValidator(1)],
                                                   default=1)
     legendary = models.BooleanField()
