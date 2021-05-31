@@ -6,6 +6,7 @@ from . import views
 
 router = DefaultRouter()
 router.register(r'pokemon', views.PokemonViewSet)
+router.register(r'users', views.UserViewSet)
 
 urlpatterns = [
     path('', include(router.urls))
