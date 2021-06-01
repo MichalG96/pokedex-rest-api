@@ -8,4 +8,6 @@ for managing pokemons
 
 ## Installation
 
+## API documentation
+
 ## Examples
