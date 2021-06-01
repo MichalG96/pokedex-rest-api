@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 
-from rest_framework import viewsets, generics, permissions
+from rest_framework import viewsets, permissions
 
 from .models import Pokemon
 from .serializers import PokemonSerializer, UserSerializer

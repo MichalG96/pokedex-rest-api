@@ -11,7 +11,10 @@ with open('sensitive_data/passes.json') as f:
     passes = json.load(f)
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = passes.get('secret_key')
+
+# SECRET_KEY was stored in another, secret file, but because it's a recruitment task,
+# I'm making it public
+SECRET_KEY = 'django-insecure-ybj(s)7*=h7j+z6#!x%h78x1w^itdly=jodd$d971_hzb$l&lc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
