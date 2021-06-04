@@ -9,9 +9,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY was stored in another, secret file, but because it's a recruitment task,
-# I'm making it public
-SECRET_KEY = 'django-insecure-ybj(s)7*=h7j+z6#!x%h78x1w^itdly=jodd$d971_hzb$l&lc'
+# SECURITY WARNING: keep the secret key used in production secret!
+
+passes_file = Path('sensitive_data/passes.json')
+if passes_file.is_file():
+    with passes_file.open() as f:
+        passes = json.load(f)
+    SECRET_KEY = passes.get('secret_key')
+else:
+    SECRET_KEY = 'this_is_set_only_to_run_when_there_is_no_actual_secret_key'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

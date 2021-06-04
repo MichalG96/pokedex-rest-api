@@ -1,12 +1,9 @@
 # Pokedex
 
-## Introduction
-This is a recruitment task for internship at Jit Team. 
 ## About
-The task was to create a REST API for managing pokemons.
+This app provides a REST API for managing pokemons.
 
-Required functionalities were:
-- using Django/Flask (I'm using Django with Django Rest Framework) 
+The functionalities include:
 - storing Pokemon data in database
 - getting all Pokemons, or getting one by id
 - adding, deleting and Updating Pokemons
@@ -14,9 +11,7 @@ Required functionalities were:
 - pagination
 - authentication
 - API documentation
-- error handling
-
-and of course, there are additional points for testing.
+- error handling 
 
 ## Prerequisites
 The project was developed and tested using Python 3.9 and Windows 10 and is not guaranteed
@@ -38,6 +33,10 @@ Install the requirements:
 
 `pip install -r requirements.txt`
 
+To set your own [SECRET KEY](https://docs.djangoproject.com/en/3.2/ref/settings/#std:setting-SECRET_KEY),
+In the main project folder, create a new directory, called "sensitive_data". 
+Inside, create a file called "passes.json" which should contain JSON data, where the key
+is "secret_key" and the value is your secret key.
 
 ## Usage
 
